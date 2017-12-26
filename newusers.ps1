@@ -1,0 +1,2 @@
+"info: Plaatst de .csv in C:\"
+Import-Csv C:\newusers.csv | New-ADUser -PassThru | Set-ADAccountPassword -Reset -NewPassword (Read-Host -AsSecureString "Account Password") -PassThru | Enable-ADAccount
